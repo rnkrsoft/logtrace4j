@@ -1,9 +1,9 @@
 package com.devops4j.logtrace4j;
 
 
-import javax.web.interfaces.EnumIntegerCode;
-import javax.web.interfaces.EnumOnClass;
-import javax.web.interfaces.EnumStringCode;
+import javax.interfaces.EnumIntegerCode;
+import javax.interfaces.EnumBase;
+import javax.interfaces.EnumStringCode;
 import java.lang.*;
 import java.util.List;
 
@@ -38,7 +38,7 @@ public interface ErrorContext extends Error {
      * @param code 错误码
      * @return 上下文对象
      */
-    ErrorContext code(EnumOnClass code);
+    ErrorContext code(EnumBase code);
     /**
      * 设置正在进行的活动信息
      * @param format 格式

@@ -1,10 +1,8 @@
 package com.devops4j.logtrace4j;
 
-
-
-import javax.web.interfaces.EnumIntegerCode;
-import javax.web.interfaces.EnumOnClass;
-import javax.web.interfaces.EnumStringCode;
+import javax.interfaces.EnumIntegerCode;
+import javax.interfaces.EnumBase;
+import javax.interfaces.EnumStringCode;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.lang.*;
@@ -66,7 +64,7 @@ public class SimpleErrorContext implements ErrorContext {
         return this;
     }
 
-    public ErrorContext code(EnumOnClass code) {
+    public ErrorContext code(EnumBase code) {
         if(code instanceof EnumStringCode){
             EnumStringCode stringCode = (EnumStringCode)code;
             this.code = stringCode.getCode();
