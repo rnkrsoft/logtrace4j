@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.devops4j.logtrace4j</groupId>
     <artifactId>logtrace4j</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-RC</version>
     <name>logtrace4j</name>
     <description>this is devops4j of log track library!</description>
     <url>https://github.com/devops4j</url>
@@ -19,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.7</jdk.version>
         <sourceEncoding>UTF-8</sourceEncoding>
-        <groundwork.version>1.0.0-SNAPSHOT</groundwork.version>
+        <groundwork.version>1.0.0-RC</groundwork.version>
     </properties>
     <scm>
         <connection>git@github.com:devops4j/logtrace4j.git</connection>
