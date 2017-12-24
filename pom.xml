@@ -19,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.7</jdk.version>
         <sourceEncoding>UTF-8</sourceEncoding>
-        <interfaces.version>1.0.0-SNAPSHOT</interfaces.version>
+        <groundwork.version>1.0.0-SNAPSHOT</groundwork.version>
     </properties>
     <scm>
         <connection>git@github.com:devops4j/logtrace4j.git</connection>
@@ -34,9 +34,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.devops4j.interfaces</groupId>
-            <artifactId>interfaces</artifactId>
-            <version>${interfaces.version}</version>
+            <groupId>com.devops4j.groundwork</groupId>
+            <artifactId>groundwork</artifactId>
+            <version>${groundwork.version}</version>
         </dependency>
     </dependencies>
     <developers>

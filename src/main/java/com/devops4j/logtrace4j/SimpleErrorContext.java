@@ -1,8 +1,9 @@
 package com.devops4j.logtrace4j;
 
-import javax.interfaces.EnumIntegerCode;
-import javax.interfaces.EnumBase;
-import javax.interfaces.EnumStringCode;
+import com.devops4j.interfaces.EnumBase;
+import com.devops4j.interfaces.EnumIntegerCode;
+import com.devops4j.interfaces.EnumStringCode;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.lang.*;

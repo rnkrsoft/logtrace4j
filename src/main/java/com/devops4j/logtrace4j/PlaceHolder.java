@@ -1,7 +1,7 @@
 package com.devops4j.logtrace4j;
 
 
-import javax.message.MessageFormatter;
+import com.devops4j.message.MessageFormatter;
 
 /**
  * Created by devops4j on 2017/1/6.
