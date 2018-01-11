@@ -99,25 +99,23 @@ public interface ErrorContext extends Error {
      * @return 上下文对象
      */
     ErrorContext addSubError(EnumStringCode error);
-
-    /**
-     * 获取子错误码
-     * @return 错误码列表
-     */
-    List<String> getSubErrorCodes();
-
-    /**
-     * 获取子错误描述
-     * @param subErrorCode 子错误码
-     * @return 子错误描述
-     */
-    String getSubErrorDesc(String subErrorCode);
     /**
      * 增加子错误信息
      * @param error 子错误信息
      * @return 上下文对象
      */
     ErrorContext addSubError(EnumIntegerCode error);
+
+    /**
+     * 获取子错误个数
+     * @return 个数
+     */
+    int getSubErrorSize();
+    /**
+     * 获取子错误码
+     * @return 错误码列表
+     */
+    List<SubError> getSubErrors();
 
     /**
      * 设置导致错误的异常

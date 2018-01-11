@@ -2,10 +2,15 @@ package com.devops4j.logtrace4j;
 
 /**
  * Created by devops4j on 2017/1/6.
+ * 错误上下文工厂
  */
 public class ErrorContextFactory {
     static ThreadLocal<ErrorContext> CTX = new ThreadLocal();
 
+    /**
+     * 获取当前线程上下文
+     * @return 上下文中
+     */
     public static ErrorContext instance() {
         ErrorContext ctx = CTX.get();
         if (ctx == null) {

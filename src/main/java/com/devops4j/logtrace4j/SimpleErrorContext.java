@@ -135,20 +135,19 @@ public class SimpleErrorContext implements ErrorContext {
         return this;
     }
 
-    public List<String> getSubErrorCodes() {
-        List<String> codes = new ArrayList(subErrors.keySet());
-        Collections.sort(codes);
-        return Collections.unmodifiableList(codes);
+    public List<SubError> getSubErrors() {
+        return new ArrayList(subErrors.values());
     }
 
-    public String getSubErrorDesc(String subErrorCode) {
-        return subErrors.get(subErrorCode).getCode();
-    }
 
     public ErrorContext addSubError(EnumIntegerCode error) {
         SubError subError = new SubError(Integer.toString(error.getCode()), error.getDesc());
         subErrors.put(subError.getCode(), subError);
         return this;
+    }
+
+    public int getSubErrorSize() {
+        return subErrors.size();
     }
 
     public ErrorContext cause(Throwable cause) {

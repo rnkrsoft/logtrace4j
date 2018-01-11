@@ -99,5 +99,6 @@ public class ErrorContextFactoryTest {
         System.out.println(ctx1);
         ErrorContext ctx2 = ErrorContextFactory.recall();
         System.out.println(ctx2);
+        Assert.assertEquals(2, ctx.getSubErrorSize());
     }
 }
