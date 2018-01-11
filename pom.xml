@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.devops4j.logtrace4j</groupId>
     <artifactId>logtrace4j</artifactId>
-    <version>1.0.0-RC2</version>
+    <version>1.0.0-RC3</version>
     <name>logtrace4j</name>
-    <description>this is devops4j of log track library!</description>
+    <description>trace log library</description>
     <url>https://github.com/devops4j</url>
     <licenses>
         <license>

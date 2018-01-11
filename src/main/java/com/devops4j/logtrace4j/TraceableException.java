@@ -12,10 +12,8 @@ public class TraceableException extends Exception {
     }
 
     public TraceableException(ErrorContext context) {
+        super((context = (context == null ? ErrorContextFactory.instance() : context)).toString(), context.getCause());
         this.context = context;
-        if (this.context == null) {
-            this.context = ErrorContextFactory.instance();
-        }
     }
 
     public ErrorContext getContext() {

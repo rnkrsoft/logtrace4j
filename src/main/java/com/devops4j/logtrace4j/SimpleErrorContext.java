@@ -126,7 +126,7 @@ public class SimpleErrorContext implements ErrorContext {
 
     public ErrorContext addSubError(String code, String format, Object... args) {
         SubError subError = new SubError(code, new PlaceHolder(format, args).toString());
-        return this;
+        return addSubError(subError);
     }
 
     public ErrorContext addSubError(EnumStringCode error) {
@@ -158,6 +158,10 @@ public class SimpleErrorContext implements ErrorContext {
             //这里没必要，有可能导致死循环
         }
         return this;
+    }
+
+    public Throwable getCause(){
+        return this.cause;
     }
 
     public ErrorContext reset() {
@@ -194,10 +198,14 @@ public class SimpleErrorContext implements ErrorContext {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder(200);
-        builder.append("### =============================错误上下文=============================");
+        builder.append(LINE_SEPARATOR).append("### =============================ERROR=============================");
+        if (this.activity != null) {
+            builder.append(LINE_SEPARATOR)
+                    .append("### activity: ").append(this.activity);
+        }
         if (this.code != null) {
             builder.append(LINE_SEPARATOR)
-                    .append("### Error: ").append(LINE_SEPARATOR)
+                    .append("### error: ").append(LINE_SEPARATOR)
                     .append("\t")
                     .append(this.code)
                     .append(":")
@@ -205,7 +213,7 @@ public class SimpleErrorContext implements ErrorContext {
         }
         if (this.subErrors != null && !this.subErrors.isEmpty()) {
             builder.append(LINE_SEPARATOR)
-                    .append("### SubErrors: ");
+                    .append("### subErrors: ");
             for (Error subError : this.subErrors.values()) {
                     builder.append(LINE_SEPARATOR)
                             .append("\t")
@@ -215,13 +223,9 @@ public class SimpleErrorContext implements ErrorContext {
             }
 
         }
-        if (this.activity != null) {
-            builder.append(LINE_SEPARATOR)
-                    .append("### Activity: ").append(this.activity);
-        }
         if (this.message != null) {
             builder.append(LINE_SEPARATOR)
-                    .append("### Message: ").append(this.message);
+                    .append("### message: ").append(this.message);
         }
         if (!this.extras.isEmpty()) {
             for (String name : extras.keySet()) {
@@ -235,16 +239,16 @@ public class SimpleErrorContext implements ErrorContext {
         }
         if (this.solution != null) {
             builder.append(LINE_SEPARATOR)
-                    .append("### Solution: ").append(this.solution);
+                    .append("### solution: ").append(this.solution);
         }
         if (this.cause != null) {
             ByteArrayOutputStream os = new ByteArrayOutputStream();
             PrintStream ps = new PrintStream(os);
             this.cause.printStackTrace(ps);
             builder.append(LINE_SEPARATOR)
-                    .append("### Cause: ").append(os.toString());
+                    .append("### cause: ").append(os.toString());
         }
-        builder.append(LINE_SEPARATOR).append("### ================================结束================================");
+        builder.append(LINE_SEPARATOR).append("### --------------------------ERROR-END-----------------------------");
         return builder.toString();
     }
 }

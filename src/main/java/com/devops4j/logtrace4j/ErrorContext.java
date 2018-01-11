@@ -127,6 +127,11 @@ public interface ErrorContext extends Error {
     ErrorContext cause(Throwable cause);
 
     /**
+     * 错误异常
+     * @return 异常
+     */
+    Throwable getCause();
+    /**
      * 重置上下文对象
      * @return 上下文对象
      */
