@@ -170,6 +170,7 @@ public class SimpleErrorContext implements ErrorContext {
         this.message = null;
         this.solution = null;
         this.subErrors.clear();
+        this.extras.clear();
         this.cause = null;
         return this;
     }
