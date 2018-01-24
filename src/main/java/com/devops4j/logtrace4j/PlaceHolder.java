@@ -11,7 +11,7 @@ public class PlaceHolder {
     Object[] args;
 
     PlaceHolder(String format, Object[] args) {
-        this.format = format;
+        this.format = (format == null ? "" : format);
         this.args = args;
     }
 
