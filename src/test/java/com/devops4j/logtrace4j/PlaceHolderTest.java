@@ -11,7 +11,7 @@ public class PlaceHolderTest {
 
     @Test
     public void testToString() throws Exception {
-        PlaceHolder holder = new PlaceHolder(null, new String[0]);
+        PlaceHolder holder = new PlaceHolder(null, null);
         System.out.println(holder);
     }
 }

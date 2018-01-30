@@ -11,12 +11,12 @@ public class PlaceHolder {
     Object[] args;
 
     PlaceHolder(String format, Object[] args) {
-        this.format = (format == null ? "" : format);
+        this.format = format;
         this.args = args;
     }
 
     @Override
     public String toString() {
-        return MessageFormatter.format(format, args);
+        return MessageFormatter.format((format == null ? "" : format), (args == null ? new Object[0] : args));
     }
 }
