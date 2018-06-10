@@ -1,10 +1,8 @@
-package com.devops4j.logtrace4j;
+package com.rnkrsoft.logtrace4j;
 
-import com.devops4j.interfaces.EnumIntegerCode;
-import com.devops4j.interfaces.EnumStringCode;
+import com.rnkrsoft.interfaces.EnumIntegerCode;
+import com.rnkrsoft.interfaces.EnumStringCode;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by devops4j on 2018/1/11.

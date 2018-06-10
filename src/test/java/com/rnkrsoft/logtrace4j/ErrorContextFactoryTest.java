@@ -1,4 +1,4 @@
-package com.devops4j.logtrace4j;
+package com.rnkrsoft.logtrace4j;
 
 import org.junit.Assert;
 import org.junit.Test;

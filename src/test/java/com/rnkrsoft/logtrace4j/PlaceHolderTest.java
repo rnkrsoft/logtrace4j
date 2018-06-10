@@ -1,8 +1,6 @@
-package com.devops4j.logtrace4j;
+package com.rnkrsoft.logtrace4j;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by 面试1 on 2018/1/24.
