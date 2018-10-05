@@ -9,12 +9,6 @@
     <name>logtrace4j</name>
     <description>trace log library</description>
     <url>https://git.rnkrsoft.com</url>
-    <licenses>
-        <license>
-            <name>Apache License Version 2.0</name>
-            <url>http://www.apache.org/licenses</url>
-        </license>
-    </licenses>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.7</jdk.version>
@@ -32,6 +26,7 @@
             <groupId>com.rnkrsoft.groundwork</groupId>
             <artifactId>groundwork</artifactId>
             <version>${groundwork.version}</version>
+            <optional>true</optional>
         </dependency>
     </dependencies>
     <developers>
@@ -81,39 +76,6 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <configuration>
-                            <appendAssemblyId>false</appendAssemblyId>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
-                            <archive>
-                                <manifest>
-                                    <mainClass>com.devops4j.common.image.ImageResize</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>make-assembly</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>assembly</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.16</version>
-                        <configuration>
-                            <forkMode>always</forkMode>
-                            <argLine>-Dfile.encoding=UTF-8</argLine>
-                        </configuration>
-                    </plugin>
-
                     <!-- Javadoc -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -174,12 +136,12 @@
     </repositories>
     <distributionManagement>
         <snapshotRepository>
-            <id>rnkrsoft</id>
-            <url>http://nexus.rnkrsoft.com/content/repositories/snapshots/</url>
+            <id>open-source-snapshots</id>
+            <url>http://nexus.rnkrsoft.com/content/repositories/open-source-snapshots/</url>
         </snapshotRepository>
         <repository>
-            <id>rnkrsoft</id>
-            <url>http://nexus.rnkrsoft.com/content/repositories/releases/</url>
+            <id>open-source-releases</id>
+            <url>http://nexus.rnkrsoft.com/content/repositories/open-source-releases/</url>
         </repository>
     </distributionManagement>
 </project>
