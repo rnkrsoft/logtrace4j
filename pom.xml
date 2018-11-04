@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.rnkrsoft.logtrace4j</groupId>
     <artifactId>logtrace4j</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1-beta2</version>
     <name>logtrace4j</name>
     <description>trace log library</description>
     <url>https://git.rnkrsoft.com</url>
@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.7</jdk.version>
         <sourceEncoding>UTF-8</sourceEncoding>
-        <groundwork.version>1.0.1-SNAPSHOT</groundwork.version>
+        <groundwork.version>1.0.1-beta2</groundwork.version>
     </properties>
     <dependencies>
         <dependency>
